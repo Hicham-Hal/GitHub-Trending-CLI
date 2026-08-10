@@ -93,6 +93,9 @@ Invalid input prints a clear error message and exits without calling the API. Ne
 
 This tool makes unauthenticated requests to the GitHub API, which are limited to **60 requests per hour** per IP address. If you hit the limit, wait a bit before trying again.
 
+## Project link
+https://roadmap.sh/projects/github-trending-cli
+
 ## License
 
 ISC
