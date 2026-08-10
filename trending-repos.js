@@ -23,8 +23,6 @@ const dateStr = date.toISOString().split('T')[0]
 const API = `https://api.github.com/search/repositories?q=created:>${dateStr}&sort=stars&order=desc&per_page=${getFlagValue('--limit') || 10}`
 
 async function main(){
-    const upData = []
-    const data = {}
     try{
         const response = await fetch(API)
         if(!response.ok){
@@ -35,7 +33,7 @@ async function main(){
             name: item.full_name,
             description: item.description,
             stars: item.stargazers_count,
-            languague: item.languague || 'Unknown'
+            language: item.language || 'Unknown'
         }));
         return upData
 
