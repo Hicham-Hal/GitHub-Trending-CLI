@@ -1,0 +1,20 @@
+{
+  "name": "github-trending-cli",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Hicham-Hal/GitHub-Trending-CLI#readme",
+  "bugs": {
+    "url": "https://github.com/Hicham-Hal/GitHub-Trending-CLI/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hicham-Hal/GitHub-Trending-CLI.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
