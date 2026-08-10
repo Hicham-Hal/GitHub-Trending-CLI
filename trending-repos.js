@@ -1,4 +1,5 @@
-import { get } from 'node:https'
+#!/usr/bin/env node
+
 import {argv, exit} from 'node:process'
 
 const handleError = (message) => {
@@ -20,16 +21,13 @@ const getFlagValue = (flagName) => {
     }
     let flagValue = argv[argv.indexOf(flagName)+1]
     if(flagValue === undefined || flagValue.startsWith('--')){
-        handleError('You must implement the flag value after the flag')
-        return
+        handleError('Flags must be followed by a value')
     }
     if(flagName === '--duration' && flagValue && !dayMap[flagValue]){
         handleError(`--duration must be: day, week, month, year`)
-        return
     }
-    if(flagName === '--limit' && flagValue && isNaN(flagValue)){
-        handleError(`--limit must be a valid number`)
-        return
+    if(flagName === '--limit' && flagValue && !Number.isInteger(Number(flagValue)) || flagValue <= 0){
+        handleError(`--limit must be a valid number and greater than 0`)
     }
     return flagValue
 }

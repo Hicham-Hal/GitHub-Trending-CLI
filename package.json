@@ -1,5 +1,8 @@
 {
   "name": "github-trending-cli",
+  "bin": {
+    "trending-repos": "./trending-repos.js"
+  },
   "version": "1.0.0",
   "description": "",
   "homepage": "https://github.com/Hicham-Hal/GitHub-Trending-CLI#readme",
@@ -13,7 +16,7 @@
   "license": "ISC",
   "author": "",
   "type": "module",
-  "main": "index.js",
+  "main": "trending-repos.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }
